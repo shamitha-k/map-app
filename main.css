@@ -1,0 +1,144 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  text-decoration:none;
+}
+body{
+  min-width: 100vh;
+  background:url(mapimage.jpg);
+  background-size: cover;
+  filter: blur(80%);
+  
+}
+header{
+  position: fixed;
+  top:0;left:0;right:0;
+  background:#ffffff;
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+  padding:20px 7%;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+.upload{
+  width: 100px;
+  position: relative;
+  margin-right: auto;
+}
+
+.upload img{
+  border-radius: 50%;
+  border: 6px solid #eaeaea;
+}
+
+.upload .round{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #00B4FF;
+  width: 32px;
+  height: 32px;
+  line-height: 33px;
+  text-align: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.upload .round input[type = "file"]{
+  position: absolute;
+  transform: scale(2);
+  opacity: 0;
+}
+
+input[type=file]::-webkit-file-upload-button{
+    cursor: pointer;
+}
+header nav ul{
+  list-style: none;
+}
+header nav ul li{
+  position: relative;
+  float:left;
+
+}
+header nav ul li a{
+  font-size: 20px;
+  padding: 20px;
+  color:#333;
+  display:block;
+
+}
+header nav ul li a:hover{
+  background-color: aqua;
+}
+.button{
+  background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%);
+  margin:10px;
+  padding: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  width:95%;
+  color: white;            
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+.button:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+#menu-btn{
+  display: none;
+}
+
+header label{
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  display: none;
+
+}
+
+
+
+
+
+
+
+
+
+
+@media(max-width:991px){
+  header{
+    padding: 20px;
+  }
+
+  header label{
+    display:initial;
+  }
+
+  header .navbar{
+    position: absolute;
+    top:100%;left:0;right:0;
+    background:#fff;
+    border-top: 1px solid rgba(0,0,0,.1) ;
+    display: none;
+
+  }
+  header .navbar ul li{
+    width:100%;
+
+  }
+  #menu-btn:checked ~ .navbar{
+    display:initial;
+
+  }
+}
+  
+
+  
